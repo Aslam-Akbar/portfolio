@@ -1,46 +1,46 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
+import { motion } from "framer-motion"
+import Image from "next/image"
+import { useState } from "react"
 
 export default function ProfileImage({ size = "large", showBadge = true }) {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isHovering, setIsHovering] = useState(false)
 
   // Size variants
   const dimensions = {
     large: "w-64 h-64 md:w-72 md:h-72",
     medium: "w-32 h-32 md:w-40 md:h-40",
     small: "w-12 h-12",
-  };
+  }
 
   // Border thickness based on size
   const borderThickness = {
     large: "-inset-1",
     medium: "-inset-1",
-    small: "-inset-[1px]", // Even thinner for header
-  };
+    small: "-inset-[2px]", // Reduced thickness for header
+  }
 
   // Image sizes and positioning based on container size
   const imageSizes = {
     large: { width: 200, height: 200 },
     medium: { width: 110, height: 110 },
-    small: { width: 32, height: 32 }, // Larger to ensure it fills the circle
-  };
+    small: { width: 32, height: 32 },
+  }
 
   // 3D tilt effect on hover for large and medium sizes
   const handleMouseMove = (e) => {
-    if (size === "small") return;
+    if (size === "small") return
 
-    const { currentTarget, clientX, clientY } = e;
-    const { left, top, width, height } = currentTarget.getBoundingClientRect();
+    const { currentTarget, clientX, clientY } = e
+    const { left, top, width, height } = currentTarget.getBoundingClientRect()
 
-    const x = (clientX - left) / width;
-    const y = (clientY - top) / height;
+    const x = (clientX - left) / width
+    const y = (clientY - top) / height
 
-    setMousePosition({ x, y });
-  };
+    setMousePosition({ x, y })
+  }
 
   return (
     <motion.div
@@ -77,14 +77,12 @@ export default function ProfileImage({ size = "large", showBadge = true }) {
 
         {/* Main container with 3D tilt effect */}
         <motion.div
-          className="relative rounded-full overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 h-full"
+          className="relative rounded-full overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 p-1 h-full flex items-center justify-center"
           style={
             size !== "small"
               ? {
                   transform: isHovering
-                    ? `perspective(1000px) rotateX(${
-                        (mousePosition.y - 0.5) * 10
-                      }deg) rotateY(${(mousePosition.x - 0.5) * -10}deg)`
+                    ? `perspective(1000px) rotateX(${(mousePosition.y - 0.5) * 10}deg) rotateY(${(mousePosition.x - 0.5) * -10}deg)`
                     : "perspective(1000px) rotateX(0deg) rotateY(0deg)",
                   transition: "transform 0.2s ease-out",
                 }
@@ -94,22 +92,15 @@ export default function ProfileImage({ size = "large", showBadge = true }) {
           {/* Subtle overlay for depth */}
           <div className="absolute inset-0 bg-gradient-to-b from-blue-600/5 to-purple-600/5 z-10 group-hover:opacity-50 transition-opacity duration-300"></div>
 
-          {/* The image - centered properly with no gap */}
+          {/* The image - centered properly */}
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Profile-removebg-preview-bD1bRC3Y1lOkQkz3lR7t1JlbNHoSt5.png"
             alt="Mohamed Aslam A"
             width={imageSizes[size].width}
             height={imageSizes[size].height}
-            className={`transition-transform duration-300 ${
-              size !== "small" ? "group-hover:scale-105" : ""
-            }`}
+            className={`transition-transform duration-300 ${size !== "small" ? "group-hover:scale-105" : ""}`}
             priority={size === "large"}
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-              width: "100%",
-              height: "100%",
-            }}
+            style={{ objectFit: "contain", objectPosition: "center" }}
           />
         </motion.div>
       </div>
@@ -127,5 +118,6 @@ export default function ProfileImage({ size = "large", showBadge = true }) {
         </motion.div>
       )}
     </motion.div>
-  );
+  )
 }
+
