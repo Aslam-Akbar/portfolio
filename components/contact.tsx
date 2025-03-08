@@ -73,13 +73,13 @@ export default function Contact() {
       href: "mailto:aslam21tech@gmail.com",
     },
     { icon: <Phone className="h-5 w-5 text-blue-400" />, text: "+91-7904892215", href: "tel:+917904892215" },
-    { icon: <MapPin className="h-5 w-5 text-blue-400" />, text: "Tiruchirappalli, Tamilnadu", href: "#" },
+    { icon: <MapPin className="h-5 w-5 text-blue-400" />, text: "Tiruchirappalli, Tamilnadu", href: "https://www.google.com/maps/place/Tiruchirappalli,+Tamil+Nadu/@10.8158337,78.6066259,27373m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3baaf50ff2aecdad:0x6de02c3bedbbaea6!8m2!3d10.7904833!4d78.7046725!16zL20vMDE5Zmx2?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" },
     {
       icon: <Linkedin className="h-5 w-5 text-blue-400" />,
       text: "linkedin.com/in/mohamed-aslam07",
       href: "https://linkedin.com/in/mohamed-aslam07/",
     },
-    { icon: <Github className="h-5 w-5 text-blue-400" />, text: "GitHub", href: "#" },
+    { icon: <Github className="h-5 w-5 text-blue-400" />, text: "GitHub", href: "https://github.com/Aslam-Akbar" },
   ]
 
   return (
