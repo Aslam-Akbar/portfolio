@@ -47,8 +47,8 @@ export default function Projects() {
       imageUrl:
         "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       tags: ["JavaScript", "Weather API", "CSS"],
-      demoLink: "#",
-      codeLink: "#",
+      demoLink: "https://weatherbyaslam.netlify.app/",
+      codeLink: "https://github.com/Aslam-Akbar/weather",
       category: "personal",
     },
     {
@@ -60,61 +60,9 @@ export default function Projects() {
       imageUrl:
         "https://images.unsplash.com/photo-1606167668584-78701c57f13d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       tags: ["JavaScript", "HTML", "CSS", "Game Logic"],
-      demoLink: "#",
-      codeLink: "#",
+      demoLink: "https://memorygamebyaslam.netlify.app/",
+      codeLink: "https://github.com/Aslam-Akbar/memory-game",
       category: "personal",
-    },
-    {
-      id: "ecommerce",
-      title: "E-commerce Website",
-      description:
-        "Fully functional e-commerce platform with product listings, shopping cart, and checkout process. Includes user authentication, product filtering, and responsive design for all devices.",
-      image: "/ecommerce.jpg",
-      imageUrl:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      tags: ["JavaScript", "HTML", "CSS", "API Integration"],
-      demoLink: "#",
-      codeLink: "#",
-      category: "personal",
-    },
-    {
-      id: "chat",
-      title: "Chat Application",
-      description:
-        "Real-time chat application with private messaging and group chat functionality. Features include message notifications, online status indicators, and message history.",
-      image: "/chat-app.jpg",
-      imageUrl:
-        "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      tags: ["JavaScript", "WebSockets", "HTML", "CSS"],
-      demoLink: "#",
-      codeLink: "#",
-      category: "personal",
-    },
-    {
-      id: "recruitment",
-      title: "Recruitment System",
-      description:
-        "Comprehensive recruitment application to streamline the hiring process. Reduced time-to-hire by 50% by automating job posting, application management, and candidate selection. Integrated dynamic features for real-time updates and candidate filtering.",
-      image: "/recruitment.jpg",
-      imageUrl:
-        "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      tags: ["React.js", "Node.js", "Database", "API"],
-      demoLink: "#",
-      codeLink: "#",
-      category: "professional",
-    },
-    {
-      id: "censored",
-      title: "Censored Data in Social Networking",
-      description:
-        "System to censor inappropriate content on social media platforms. Utilized word-hunt algorithms and image processing techniques to detect and filter harmful content, ensuring a safer online environment.",
-      image: "/censored-data.jpg",
-      imageUrl:
-        "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      tags: ["Python", "NLP", "Image Processing", "Algorithms"],
-      demoLink: "#",
-      codeLink: "#",
-      category: "academic",
     },
   ]
 
